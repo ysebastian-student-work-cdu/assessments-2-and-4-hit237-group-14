@@ -17,6 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from group14_app import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.home, name ='homepage'),
+    path('home/', views.home, name ='homepage'),
+    path('list/', views.list, name ='list'),
+    path('details/', views.details, name ='details'),
+    path('data_model/', views.data_model, name ='data_model'),
 ]
