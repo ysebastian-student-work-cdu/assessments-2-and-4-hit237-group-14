@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     #user-defined apps 
-    'group14_app',
+    'group14_app.apps.Group14AppConfig',
 ]
 
 MIDDLEWARE = [
