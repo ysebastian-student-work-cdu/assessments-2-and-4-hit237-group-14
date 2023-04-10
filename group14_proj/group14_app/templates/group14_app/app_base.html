@@ -3,6 +3,10 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>
         {% block page_title %}{% endblock %}
     </title>
@@ -18,9 +22,12 @@
         <a href="{% url 'data_model' %}">Data Model</a>
     </nav>
     <div>
-        {% block page_heading %}<h1>ERROR: No Heading Supplied</h1>{% endblock %}
-
-        {% block main_body %}{% endblock %}
+        {% block page_heading %}
+            <h1>ERROR: No Heading Supplied</h1>
+        {% endblock %}
+        {% block main_body %}
+        
+        {% endblock %}
     </div>
 </body>
 
