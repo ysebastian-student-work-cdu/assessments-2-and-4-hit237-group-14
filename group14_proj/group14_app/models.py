@@ -15,3 +15,7 @@ class FoodWaste(models.Model):
     ]
     type = models.CharField(max_length=20, choices=TYPE_CHOICES)
     description = models.TextField()
+
+class FoodDetail(models.Model):
+    name = models.CharField(max_length=200, null=True, help_text="Waste Name")
+    desc = models.TextField()
