@@ -8,13 +8,13 @@
 <body>
     {% block page_heading %}
     <header>
-        <h1>Details</h1>
+        <h1>{{ FoodDetail.name }}</h1>
     </header>
     {% endblock %}
     
     {% block main_body %}
-    <div>
-        <h3>In-depth details about the top wasted food</h3>
+    <div class="container">
+        <p>{{ food_waste_list.desc }}</p>
     </div>
     {% endblock %}
 </body>
