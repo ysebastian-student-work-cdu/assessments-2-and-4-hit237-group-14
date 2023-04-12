@@ -63,9 +63,4 @@ def details(request, id):
 
 
 def data_model(request):
-    content = {}
-    
-    briefs = Introduction.objects.all
-    content['briefs'] = briefs
-    
-    return render(request, 'group14_app/data-model.html', content)
+    return render(request, 'group14_app/data-model.html')
