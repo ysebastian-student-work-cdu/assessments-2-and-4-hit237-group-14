@@ -21,7 +21,7 @@ from group14_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('group14_app.urls'))
+    path('', include('group14_app.urls')),
     path('', views.home, name ='homepage'),
     path('home/', views.home, name ='homepage'),
     path('list/', views.list, name ='list'),
