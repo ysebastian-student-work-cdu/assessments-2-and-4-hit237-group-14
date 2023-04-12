@@ -1,20 +1,20 @@
 {% extends "group14_app/app_base.html" %}
 
-    {% block page_title %}
+    {% block title %}
     Details
-    {% endblock %}
+    {% endblock title %}
 
 
 <body>
-    {% block page_heading %}
+    {% block heading %}
     <header>
         <h1>{{ FoodDetail.name }}</h1>
     </header>
-    {% endblock %}
+    {% endblock heading %}
     
-    {% block main_body %}
+    {% block content %}
     <div class="container">
         <p>{{ food_waste_list.desc }}</p>
     </div>
-    {% endblock %}
+    {% endblock content %}
 </body>

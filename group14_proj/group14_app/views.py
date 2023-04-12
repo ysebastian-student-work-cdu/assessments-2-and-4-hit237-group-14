@@ -1,11 +1,21 @@
 from django.shortcuts import render, get_object_or_404
-from .models import FoodDetail
+from group14_app.models import FoodDetail, Profile, Introduction
 # Create your views here.
 
 
 def home(request):
-    return render(request, 'group14_app/homepage.html')
+    template = "group14_app/homepage.html"
+    data = {}
+    
+    profiles = Profile.objects.all()
+    data['profiles'] = profiles
 
+    content = {}
+    
+    briefs = Introduction.objects.all
+    content['briefs'] = briefs
+    
+    return render(request, template, {'profiles': profiles, 'briefs': briefs})
 
 def list(request):
     food_waste_list = [
@@ -53,4 +63,9 @@ def details(request, id):
 
 
 def data_model(request):
-    return render(request, 'group14_app/data-model.html')
+    content = {}
+    
+    briefs = Introduction.objects.all
+    content['briefs'] = briefs
+    
+    return render(request, 'group14_app/data-model.html', content)

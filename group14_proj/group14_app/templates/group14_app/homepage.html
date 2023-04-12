@@ -1,17 +1,27 @@
 {% extends "group14_app/app_base.html" %}
 
-    {% block page_title %}
-    Home
-    {% endblock %}
+{% block title %}
+Home
+{% endblock title %}
 
-    {% block page_heading %}
-    <header>
-        <h1>Group 14</h1>
-    </header>
-    {% endblock %}
-    
-    {% block main_body %}
-    <div>
-        <h3>Team Members and Student IDs</h3>
-    </div>
-    {% endblock %}
+{% block heading %}
+<header>
+    <h1>Group 14 - Food Waste Problems and Mitigation</h1>
+</header>
+{% endblock heading %}
+
+{% block content %}
+<main>
+    <h2>Team Member Names and Student IDs:</h2>
+
+    {% for profile in profiles %}
+    {% include 'group14_app/snippets/profile_snippet.html' with value=profile %}
+    {% endfor %}
+
+    <h2>Our Website Introduction:</h2>
+
+    {% for brief in briefs %}
+    {% include 'group14_app/snippets/intro_snippet.html' with value=brief %}
+    {% endfor %}
+</main>
+{% endblock content %}

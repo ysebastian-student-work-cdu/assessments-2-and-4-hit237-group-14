@@ -1,25 +1,25 @@
 {% extends "group14_app/app_base.html" %}
 
-    {% block page_title %}
-    <title>List</title>
-    {% endblock %}
+{% block title %}
+List
+{% endblock title %}
 
 
-    {% block page_heading %}
-    <header>
-        <h1>List</h1>
-    </header>
-    {% endblock %}
+{% block heading %}
+<header>
+    <h1>List</h1>
+</header>
+{% endblock heading %}
 
-    {% block main_body %}
-    <div>
-        <ul>
-            {% for food_waste_list in list %}
-            <li>
-                <h2><a href="/details/{{ food_waste_list.id }}/">{{ food_waste_list.type }} </a></h2>
-                <p>{{ food_waste_list.description }}</p>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% endblock %}
+{% block content %}
+<main>
+    <ul>
+        {% for food_waste_list in list %}
+        <li>
+            <h2><a href="/details/{{ food_waste_list.id }}/">{{ food_waste_list.type }} </a></h2>
+            <p>{{ food_waste_list.description }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</main>
+{% endblock content %}
