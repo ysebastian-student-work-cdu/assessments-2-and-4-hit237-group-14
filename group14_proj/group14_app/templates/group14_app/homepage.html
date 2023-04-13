@@ -12,16 +12,32 @@ Home
 
 {% block content %}
 <main>
-    <h2>Team Member Names and Student IDs:</h2>
+    <h2>(Option 1)</h2>
+    <h3>Team profile Names and Student IDs:</h3>
 
-    {% for profile in profiles %}
-    {% include 'group14_app/snippets/profile_snippet.html' with value=profile %}
-    {% endfor %}
+    <table>
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Student Id</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for team_profile in team_profiles %}
+            <tr>
+                <td>{{ team_profile.name }}</td>
+                <td>{{ team_profile.id }}</td>
+                <td>{{ team_profile.gender }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
-    <h2>Our Website Introduction:</h2>
+    <h3>Our Website Introduction:</h3>
+        {% for group_intro in group_intros %}
+        <p>{{ group_intro.brief}}</p>
+        {% endfor %}
 
-    {% for brief in briefs %}
-    {% include 'group14_app/snippets/intro_snippet.html' with value=brief %}
-    {% endfor %}
 </main>
 {% endblock content %}
