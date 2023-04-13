@@ -2,11 +2,13 @@ from django.db import models
 
 # Create your models here.
 
+#below is the codes to define the "Profile" and "Introduction" model in our
+#group14_app's models.py
+#created by putu (from line 8-32)
 GENDER = [
     ("M", "Male"),
     ("F", "Female"),
 ]
-# List view
 class Profile(models.Model):
     Full_Name = models.CharField(max_length=50)
     Student_Id = models.CharField(max_length=10)

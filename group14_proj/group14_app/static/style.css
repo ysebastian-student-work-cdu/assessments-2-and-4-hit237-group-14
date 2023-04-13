@@ -1,3 +1,32 @@
-header{
-    color: pink;
+header {
+    color: brown;
+}
+
+table {
+	border-collapse: collapse;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+table th {
+    padding: 15px;
+}
+table td {
+	padding: 15px;
+}
+table thead th {
+	background-color: brown;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 13px;
+	border: 1px solid brown;
+}
+table tbody td {
+	color: #636363;
+	border: 1px solid brown;
+}
+table tbody tr {
+	background-color: #fbfaf9;
+}
+table tbody tr:nth-child(odd) {
+	background-color: #ffffff;
 }

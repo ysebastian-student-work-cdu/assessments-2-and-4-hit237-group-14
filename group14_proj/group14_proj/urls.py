@@ -21,8 +21,10 @@ from group14_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name ='homepage'),
-    path('home/', views.home, name ='homepage'),
+    #path('', views.home1, name ='homepage'),
+    #path('home/', views.home1, name ='homepage'),
+    path('', views.home2, name ='homepage'),
+    path('home/', views.home2, name ='homepage'),
     path('list/', views.list, name ='list'),
     path('details/<int:id>/', views.details, name = 'details'),
     re_path(r'^details/(?P<id>[1-6]{1})/?$', views.details),
