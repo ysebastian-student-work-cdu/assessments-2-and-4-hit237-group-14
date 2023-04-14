@@ -7,14 +7,41 @@
 
 <body>
     {% block heading %}
-    <header>
+    <header class="text-center">
         <h1>{{ food_waste_list.name }}</h1>
     </header>
     {% endblock heading %}
     
     {% block content %}
-    <div class="container">
+    <div class="text-center">
         <p>{{ food_waste_list.desc }}</p>
     </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Household Waste</th>
+                <th>Retail Waste</th>
+                <th>Restaurant Waste</th>
+                <th>Agricultural Waste</th>
+                <th>Processing Waste</th>
+                <th>Transportation Waste</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2,500 tonnes per year</td>
+                <td>300 tonnes per year</td>
+                <td>400 tonnes per year</td>
+                <td>400 tonnes per year</td>
+                <td>1,700 tonnes per year</td>
+                <td>2,300 tonnes per year</td>
+            </tr>
+        </tbody>
+    </table>
     {% endblock content %}
+
+    {% block info %}
+    
+    {% endblock info %}
+
 </body>

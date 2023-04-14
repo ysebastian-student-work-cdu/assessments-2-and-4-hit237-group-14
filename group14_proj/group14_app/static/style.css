@@ -30,3 +30,10 @@ table tbody tr {
 table tbody tr:nth-child(odd) {
 	background-color: #ffffff;
 }
+
+.text-center {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
