@@ -1,4 +1,5 @@
 {% extends "group14_app/app_base.html" %}
+{% load static %} 
 
 {% block title %}
 Details
@@ -16,7 +17,7 @@ Details
 
     {% block content %}
     <div class="container">
-        <p>{{ food_waste_list.desc }}</p>
+        <p>{{ food_waste_list.desc|linebreaksbr }}</p>
     </div>
     <table>
         <thead>
@@ -31,15 +32,21 @@ Details
         </thead>
         <tbody>
             <tr>
-                <td>2,500 tonnes per year</td>
-                <td>300 tonnes per year</td>
+                <td>67 million tonnes per year</td>
+                <td>2.7 million tonnes per year</td>
                 <td>400 tonnes per year</td>
-                <td>400 tonnes per year</td>
+                <td>6.7 million tonnes per year</td>
                 <td>1,700 tonnes per year</td>
                 <td>2,300 tonnes per year</td>
             </tr>
         </tbody>
     </table>
+    <div>
+        <p>‎ </p>
+        <p> Below shows the process of how food is wasted every year and the impacts</p>
+        <p>‎ </p>
+        <img src="{% static 'wastes.jpg' %}"/>
+    </div>
     {% endblock content %}
 
     {% block info %}

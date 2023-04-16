@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 from group14_app import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,3 +28,5 @@ urlpatterns = [
     re_path(r'^details/(?P<id>[1-6]{1})/?$', views.details),
     path('data_model/', views.data_model, name ='data_model'),
 ]
+
+urlpatterns += staticfiles_urlpatterns()

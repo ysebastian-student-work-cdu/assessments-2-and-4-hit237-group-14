@@ -190,3 +190,8 @@ a{
 .end h4 {
 	color: white;
 }
+
+img {
+	width: 800px;
+	height: 800px;
+  }
