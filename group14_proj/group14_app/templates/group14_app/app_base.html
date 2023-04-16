@@ -18,9 +18,13 @@
 
 <body>
     <nav>
-        <a href="{% url 'homepage' %}">Home</a>
-        <a href="{% url 'list' %}">List</a>
-        <a href="{% url 'data_model' %}">Data Model</a>
+        <div class="menu">
+            <ul>
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                <li><a href="{% url 'list' %}">List</a></li>
+                <li><a href="{% url 'data_model' %}">Data Model</a></li>
+            </ul>
+        </div>
     </nav>
 
     {% block heading %}
@@ -31,9 +35,15 @@
 
     <main>
         {% block content %}
-
+        <h1>ERROR: No Content Supplied</h1>
         {% endblock content%}
     </main>
+
+    <footer>
+        <div class="end">
+            <h4>Copyright - Group 14</h4>
+        </div>
+    </footer>
 </body>
 
 </html>

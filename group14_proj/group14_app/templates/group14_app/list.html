@@ -7,19 +7,24 @@ List
 
 {% block heading %}
 <header>
-    <h1>List</h1>
+    <section id="hero1">
+        <h1>Food Waste Categories</h1>
+    </section>
 </header>
 {% endblock heading %}
 
 {% block content %}
 <main>
-    <ul>
-        {% for food_waste_list in list %}
-        <li>
-            <h2><a href="/details/{{ food_waste_list.id }}/">{{ food_waste_list.type }} </a></h2>
-            <p>{{ food_waste_list.description }}</p>
-        </li>
-        {% endfor %}
-    </ul>
+    <div class="container">
+        <ul>
+            {% for food_waste_list in list %}
+            <li>
+                <div class="category"></div>
+                <h2><a href="/details/{{ food_waste_list.id }}/">{{ food_waste_list.type }} </a></h2>
+                <p>{{ food_waste_list.description }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </main>
 {% endblock content %}
