@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from group14_app.models import FoodDetail
+from group14_app.details import Detail
 # Create your views here.
 
 
@@ -7,16 +8,17 @@ def home(request):
     template = "group14_app/homepage.html"
     
     context = {}
-    team_profiles = [
-        {'name': 'Muhammad Firdaus Roslan',
-            'id': 'S328473', 'attendance': 'External'},
-        {'name': 'Emily Wai Sum Tsang',
-            'id': 'S344909', 'attendance': 'External'},
-        {'name': 'Amila Kolamba Arachchige',
-            'id': 'S356967', 'attendance': 'External'},
-        {'name': 'I Putu Mahesa Gangga Wisuda',
-            'id': 'S355549', 'attendance': 'External'},
-    ]
+    # team_profiles = [
+    #     {'name': 'Muhammad Firdaus Roslan',
+    #         'id': 'S328473', 'attendance': 'External'},
+    #     {'name': 'Emily Wai Sum Tsang',
+    #         'id': 'S344909', 'attendance': 'External'},
+    #     {'name': 'Amila Kolamba Arachchige',
+    #         'id': 'S356967', 'attendance': 'External'},
+    #     {'name': 'I Putu Mahesa Gangga Wisuda',
+    #         'id': 'S355549', 'attendance': 'External'},
+    # ]
+    team_profiles = Detail.details
     
     info = {}
     group_intros = [
