@@ -9,13 +9,13 @@ def home(request):
     context = {}
     team_profiles = [
         {'name': 'Muhammad Firdaus Roslan',
-            'id': 'S328473', 'gender': 'Male'},
+            'id': 'S328473', 'attendance': 'External'},
         {'name': 'Emily Wai Sum Tsang',
-            'id': 'S344909', 'gender': 'Female'},
+            'id': 'S344909', 'attendance': 'External'},
         {'name': 'Amila Kolamba Arachchige',
-            'id': 'S356967', 'gender': 'Male'},
+            'id': 'S356967', 'attendance': 'External'},
         {'name': 'I Putu Mahesa Gangga Wisuda',
-            'id': 'S3255549', 'gender': 'Male'},
+            'id': 'S355549', 'attendance': 'External'},
     ]
     
     info = {}
