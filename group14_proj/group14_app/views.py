@@ -7,18 +7,11 @@ from group14_app.table import *
 
 def home(request):
     template = "group14_app/homepage.html"
-    
-    context = {}
 
     team_profiles = contacts.records
     
-    info = {}
-    group_intros = [
-        {'brief' : 'Welcome to our website which is focused on food waste and mitigation! We are dedicated to addressing one of the pressing global issues of our time: food waste. Every year, billions of tons of food are wasted worldwide, contributing to environmental, social, and economic challenges, especially in Australia. Our website serves as a comprehensive resource for individuals, businesses, and communities seeking information and solutions to reduce food waste and its impacts. From practical tips on reducing food waste at home, to innovative strategies for businesses and policymakers, our website offers a wealth of knowledge, tools, and resources to promote sustainable practices and mitigate the adverse effects of food waste. Join us in the fight against food waste, and together, we can make a positive impact on our planet and society. Explore our website and discover how you can contribute to the global effort to reduce food waste and create a more sustainable future for all.'},
-    ]
+    group_intros = briefs.records
 
-    context['team_profiles'] = team_profiles
-    info['group_intros'] = group_intros
     return render (request, template, {'team_profiles': team_profiles, 'group_intros': group_intros})
 
 
@@ -63,9 +56,14 @@ def list(request):
 def details(request, id):
     food_waste_list = get_object_or_404(FoodDetail, id=id)
 
-    context = contacts.records
+    context={'food_waste_list':food_waste_list,
+             }
     return render(request, 'group14_app/details.html', context)
 
 
 def data_model(request):
-    return render(request, 'group14_app/data-model.html')
+    food_waste_list = items.records 
+    team_profiles = contacts.records
+    group_intros = briefs.records
+
+    return render(request, 'group14_app/data-model.html', {'list': food_waste_list, 'group_intros': group_intros, 'team_profiles': team_profiles})

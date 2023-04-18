@@ -175,6 +175,24 @@ a{
 	padding: 300px 1;
 }
 
+/* Data Model */
+#hero3 {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background: url(assets/datamodel.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 300px 1;
+}
+
+.model {
+	width: 80%;
+}
+
 /* Footer */
 .end {
 	margin-top: 4%;

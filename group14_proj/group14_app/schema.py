@@ -43,5 +43,8 @@ items = Create("Item",'type','description','id')
 #create contacts table
 contacts = Create("contacts","name","id","attendance")
 
+#create website intro table
+briefs = Create("intro","brief")
+
 #create new table for mitigations
 mitigations = Create("mitigation","one","two","three") 

@@ -6,13 +6,64 @@ Data Model
 
 {% block heading %}
 <header>
-    <h1>Data Model</h1>
+    <section id="hero3">
+        <h1>Group 14 - Data Model</h1>
+    </section>
 </header>
 {% endblock heading %}
 
 {% block content %}
 <main>
-    <h3>Models</h3>
+    <div class="container">
+        <h3>Team Member Details:</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Student Id</th>
+                    <th>Attendance Mode</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for team_profile in team_profiles %}
+                <tr>
+                    <td>{{ team_profile.name }}</td>
+                    <td>{{ team_profile.id }}</td>
+                    <td>{{ team_profile.attendance }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Website Introduction:</h3>
+    {% for group_intro in group_intros %}
+    <p>{{ group_intro.brief}}</p>
+    {% endfor %}
+
+    <div class="container">
+        <h3>Food Waste List:</h3>
+
+        <table class="model">
+            <thead>
+                <tr>
+                    <th>Waste Type</th>
+                    <th>Description</th>
+                    <th>Page Ids</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for food_waste_list in list %}
+                <tr>
+                    <td>{{ food_waste_list.type }}</td>
+                    <td>{{ food_waste_list.description }}</td>
+                    <td>{{ food_waste_list.id }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 
 </main>
 {% endblock content %}
