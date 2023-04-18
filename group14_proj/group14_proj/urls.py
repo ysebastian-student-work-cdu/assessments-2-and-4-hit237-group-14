@@ -27,6 +27,7 @@ urlpatterns = [
     path('details/<int:id>/', views.details, name = 'details'),
     re_path(r'^details/(?P<id>[1-6]{1})/?$', views.details),
     path('data_model/', views.data_model, name ='data_model'),
+    path('mitigation/', views.mitigation, name ='mitigation'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

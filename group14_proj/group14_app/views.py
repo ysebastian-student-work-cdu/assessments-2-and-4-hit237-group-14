@@ -67,3 +67,8 @@ def data_model(request):
     group_intros = briefs.records
 
     return render(request, 'group14_app/data-model.html', {'list': food_waste_list, 'group_intros': group_intros, 'team_profiles': team_profiles})
+
+def mitigation(request):
+    mitigation_strategies = mitigations.records
+
+    return render(request,'group14_app/mitigation.html', {'mitigation_strategies':mitigation_strategies})
