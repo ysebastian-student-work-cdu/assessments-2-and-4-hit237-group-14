@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from group14_app.models import FoodDetail
-from group14_app.details import Detail
-from group14_app.items import Item
+from group14_app.table import *
+
 # Create your views here.
 
 
@@ -9,17 +9,8 @@ def home(request):
     template = "group14_app/homepage.html"
     
     context = {}
-    # team_profiles = [
-    #     {'name': 'Muhammad Firdaus Roslan',
-    #         'id': 'S328473', 'attendance': 'External'},
-    #     {'name': 'Emily Wai Sum Tsang',
-    #         'id': 'S344909', 'attendance': 'External'},
-    #     {'name': 'Amila Kolamba Arachchige',
-    #         'id': 'S356967', 'attendance': 'External'},
-    #     {'name': 'I Putu Mahesa Gangga Wisuda',
-    #         'id': 'S355549', 'attendance': 'External'},
-    # ]
-    team_profiles = Detail.details
+
+    team_profiles = contacts.records
     
     info = {}
     group_intros = [
@@ -64,7 +55,7 @@ def list(request):
     #         'id': '6'
     #     },
     # ]
-    food_waste_list = Item.items 
+    food_waste_list = items.records 
 
     return render(request, 'group14_app/list.html', {'list': food_waste_list})
 
@@ -72,8 +63,7 @@ def list(request):
 def details(request, id):
     food_waste_list = get_object_or_404(FoodDetail, id=id)
 
-    context = {'food_waste_list': food_waste_list,
-               }
+    context = contacts.records
     return render(request, 'group14_app/details.html', context)
 
 
