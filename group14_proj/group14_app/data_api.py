@@ -1,4 +1,3 @@
-import html
 """
 Data Model API configuration for for group14_proj project.
 
