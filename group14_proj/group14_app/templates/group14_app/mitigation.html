@@ -15,17 +15,17 @@ Mitigation
 
 {% block content %}
 <main>
-    <div class="container"> 
-        <ul>  
-             {% for mitigation_strategies in mitigation_strategies %}
-                <li>
-                    <div class="category"></div>
-                    <h2>{{ mitigation_strategies.one }}</h2>
-                    <p>{{ mitigation_strategies.two }}</p>
-                    <p>{{ mitigation_strategies.three }}</p>
-                </li>
-                {% endfor %}
-        </ul>        
+    <div class="container">
+        <ul>
+            {% for mitigation_strategies in mitigation_strategies %}
+            <li>
+                <div class="category"></div>
+                <h2>{{ mitigation_strategies.one }}</h2>
+                <p>{{ mitigation_strategies.two }}</p>
+                <p>{{ mitigation_strategies.three }}</p>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
 </main>
 {% endblock content %}

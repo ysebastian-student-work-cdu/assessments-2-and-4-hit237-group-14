@@ -23,14 +23,14 @@ nav {
 	padding: 10px 0px;
 	transition: 0.3s;
 	justify-content: center;
-    align-items: center;
+	align-items: center;
 	background: rgba(0, 0, 0, 0.408);
 }
 
-nav .menu{
+nav .menu {
 	margin-left: 4%;
 	position: relative;
-    display: flex;
+	display: flex;
 }
 
 .menu ul {
@@ -38,21 +38,21 @@ nav .menu{
 	list-style: none;
 }
 
-nav .menu li a{
+nav .menu li a {
 	font-size: 20px;
 	text-decoration: none;
-    margin: 0 50px;
-    padding: 0px 20px;
-    color: white;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: 0.3s;
-    transition-property: color, background;
+	margin: 0 50px;
+	padding: 0px 20px;
+	color: white;
+	cursor: pointer;
+	border-radius: 20px;
+	transition: 0.3s;
+	transition-property: color, background;
 }
 
 nav .menu li a:hover {
-    color: white;
-    background: rgba(13, 240, 172, 0.5);
+	color: white;
+	background: rgba(13, 240, 172, 0.5);
 }
 
 
@@ -157,7 +157,7 @@ p {
 	margin: 3%;
 }
 
-a{
+a {
 	color: rgb(5, 134, 121);
 }
 
@@ -195,7 +195,7 @@ a{
 
 /* Mitigation */
 #hero4 {
-	position: relative; 
+	position: relative;
 	width: 100%;
 	min-height: 100vh;
 	background: url(assets/mitigation.jpg) no-repeat;
@@ -206,9 +206,9 @@ a{
 	text-align: center;
 	padding: 300px 1;
 }
+
 h2 {
 	color: rgb(5, 134, 121);
-	text-decoration: underline;
 }
 
 /* Footer */
@@ -222,15 +222,15 @@ h2 {
 	background: rgb(5, 134, 121);
 }
 
-.end h4{
+.end h4 {
 	color: white;
 }
-.end p{
+
+.end p {
 	color: white;
 }
 
 img {
 	width: 800px;
 	height: 800px;
-  }
-
+}

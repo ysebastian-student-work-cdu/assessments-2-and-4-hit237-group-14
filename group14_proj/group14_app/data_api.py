@@ -51,42 +51,49 @@ Data Model API configuration for for group14_proj project.
 from group14_app.schema import *
 from group14_app.table import *
 
-#----------------------create tables---------------------
+# ----------------------create tables---------------------
 
-items = Create("Item",'type','description','id')
-contacts = Create("contacts","name","id","attendance")
-briefs = Create("intro","brief")
-mitigations = Create("mitigation","one","two","three") 
-food_details = Create("food_details","name","desc")
+items = Create("Item", 'type', 'description', 'id')
+contacts = Create("contacts", "name", "id", "attendance")
+briefs = Create("intro", "brief")
+mitigations = Create("mitigation", "one", "two", "three")
+food_details = Create("food_details", "name", "desc")
 
-#-----------------------insert records------------------
+# -----------------------insert records------------------
 
-#insert rows to Items table
-Table(items,["Household waste","'This is the food waste that occurs in our homes, including food that is left uneaten on plates, expired or spoiled food, and food that is thrown away because it is no longer wanted.",0])         
-Table(items,['Retail waste','This includes food that is thrown away by supermarkets, grocery stores, and other food retailers due to overstocking, expiration, or damage.',1])         
-Table(items,['Restaurant waste','This is the food waste that occurs in restaurants, cafes, and other food service establishments, including food that is left uneaten by customers, overproduction, and spoilage.',2])         
-Table(items,['Agricultural waste','This includes food that is lost during the production and harvesting of crops, such as fruits and vegetables that are left in the field due to overproduction or damage.',3])         
-Table(items,['Processing waste','This is the food waste that occurs during the processing and manufacturing of food products, including scraps, trimmings, and packaging waste.',4])         
-Table(items,['Transportation and distribution waste','This includes food that is lost during transportation and distribution, such as spoilage and damage during transit.',5])         
+# insert rows to Items table
+Table(items, ["Household waste", "'This is the food waste that occurs in our homes, including food that is left uneaten on plates, expired or spoiled food, and food that is thrown away because it is no longer wanted.", 0])
+Table(items, ['Retail waste', 'This includes food that is thrown away by supermarkets, grocery stores, and other food retailers due to overstocking, expiration, or damage.', 1])
+Table(items, ['Restaurant waste', 'This is the food waste that occurs in restaurants, cafes, and other food service establishments, including food that is left uneaten by customers, overproduction, and spoilage.', 2])
+Table(items, ['Agricultural waste', 'This includes food that is lost during the production and harvesting of crops, such as fruits and vegetables that are left in the field due to overproduction or damage.', 3])
+Table(items, ['Processing waste', 'This is the food waste that occurs during the processing and manufacturing of food products, including scraps, trimmings, and packaging waste.', 4])
+Table(items, ['Transportation and distribution waste',
+      'This includes food that is lost during transportation and distribution, such as spoilage and damage during transit.', 5])
 
-#insert rows to Contacts table
-Table(contacts,["Muhammad Firdaus Roslan","S328473","External"])
-Table(contacts,["Emily Wai Sum Tsang","S344909","External"])
-Table(contacts,["Amila Kolamba Arachchige","S356967","External"])
-Table(contacts,["I Putu Mahesa Gangga Wisuda","S355549","External"])
+# insert rows to Contacts table
+Table(contacts, ["Muhammad Firdaus Roslan", "S328473", "External"])
+Table(contacts, ["Emily Wai Sum Tsang", "S344909", "External"])
+Table(contacts, ["Amila Kolamba Arachchige", "S356967", "External"])
+Table(contacts, ["I Putu Mahesa Gangga Wisuda", "S355549", "External"])
 
-#insert rows to website intro table
-Table(briefs,["Welcome to our website which is focused on food waste and mitigation! We are dedicated to addressing one of the pressing global issues of our time: food waste. Every year, billions of tons of food are wasted worldwide, contributing to environmental, social, and economic challenges, especially in Australia. Our website serves as a comprehensive resource for individuals, businesses, and communities seeking information and solutions to reduce food waste and its impacts, specifially in household waste, retail waste, restaurant waste, agricultural waste, processing waste, and transportation and distribution waste. We will provide some solutions from practical tips on reducing food waste at home, to innovative strategies for businesses and policymakers, our website offers a wealth of knowledge, tools, and resources to promote sustainable practices and mitigate the adverse effects of food waste. Join us in the fight against food waste, and together, we can make a positive impact on our planet and society. Explore our website and discover how you can contribute to the global effort to reduce food waste and create a more sustainable future for all"])
+# insert rows to website intro table
+Table(briefs, ["Welcome to our website which is focused on food waste and mitigation! We are dedicated to addressing one of the pressing global issues of our time: food waste. Every year, billions of tons of food are wasted worldwide, contributing to environmental, social, and economic challenges, especially in Australia. Our website serves as a comprehensive resource for individuals, businesses, and communities seeking information and solutions to reduce food waste and its impacts, specifially in household waste, retail waste, restaurant waste, agricultural waste, processing waste, and transportation and distribution waste. We will provide some solutions from practical tips on reducing food waste at home, to innovative strategies for businesses and policymakers, our website offers a wealth of knowledge, tools, and resources to promote sustainable practices and mitigate the adverse effects of food waste. Join us in the fight against food waste, and together, we can make a positive impact on our planet and society. Explore our website and discover how you can contribute to the global effort to reduce food waste and create a more sustainable future for all"])
 
-#insert rows to mitigation table
-Table(mitigations,["Household Waste", "○ Reduce, reuse and reycle plastic, bottles, glass and newspapers to recycling centers or local charities", "○ Clean tools, store toys and resell outdoor furnitures to keep them out of landfills"])
-Table(mitigations,["Retail Waste", "○ Reduce energy output of LED lights as it contributes to gashouse emissions", "○ Avoid using plastic grocery bags but instead stock up reusable grocery bags"])
-Table(mitigations,["Restaurant Waste", "○ Practise efficient stock control by labelling foods with 'best before' and 'sell by' dates to avoid food waste", "○ Donate food that are close to the best before date to charities as they contribute to homeless"])
-Table(mitigations,["Agricultural Waste", "○ Compost food waste by making them into natural fertilisers to help grow fruits and vegetables", "○ Avoid buying too much products as coming in to stores regularly is better than increasing food waste"])
-Table(mitigations,["Processing Waste", "○ Manage hazardous waste by using specialised handling tools and proper disposal to ensure that there is no risk to the environment", "○ Turning waste to energy involves turning processed waste into energy products like electricity and heat that would otherwise get dumped in landfills"])
-Table(mitigations,["Transportation Waste", "○ Using alternative transporation like bikes, walking, running and etc. will reduce fuel consumption and lower emissions", "○ Sharing shipments with other companies can help reduce the number of trips that needs to be taken from the warehouse and to the destination"])
+# insert rows to mitigation table
+Table(mitigations, ["Household Waste", "○ Reduce, reuse and reycle plastic, bottles, glass and newspapers to recycling centers or local charities",
+      "○ Clean tools, store toys and resell outdoor furnitures to keep them out of landfills"])
+Table(mitigations, ["Retail Waste", "○ Reduce energy output of LED lights as it contributes to gashouse emissions",
+      "○ Avoid using plastic grocery bags but instead stock up reusable grocery bags"])
+Table(mitigations, ["Restaurant Waste", "○ Practise efficient stock control by labelling foods with 'best before' and 'sell by' dates to avoid food waste",
+      "○ Donate food that are close to the best before date to charities as they contribute to homeless"])
+Table(mitigations, ["Agricultural Waste", "○ Compost food waste by making them into natural fertilisers to help grow fruits and vegetables",
+      "○ Avoid buying too much products as coming in to stores regularly is better than increasing food waste"])
+Table(mitigations, ["Processing Waste", "○ Manage hazardous waste by using specialised handling tools and proper disposal to ensure that there is no risk to the environment",
+      "○ Turning waste to energy involves turning processed waste into energy products like electricity and heat that would otherwise get dumped in landfills"])
+Table(mitigations, ["Transportation Waste", "○ Using alternative transporation like bikes, walking, running and etc. will reduce fuel consumption and lower emissions",
+      "○ Sharing shipments with other companies can help reduce the number of trips that needs to be taken from the warehouse and to the destination"])
 
-#insert rows to fooddetails table
+# insert rows to fooddetails table
 title_1 = 'Household Waste'
 wordings_1 = '''
 
@@ -131,11 +138,11 @@ https://www.cleanup.org.au/clean-up-our-waste
 
 '''
 
-Table(food_details,[title_1, wordings_1])
+Table(food_details, [title_1, wordings_1])
 # Table(food_details,[items.table_schema[1],wordings_1])
 
 title_2 = 'Retail Waste'
-wordings_2='''
+wordings_2 = '''
 
 Australian shops dump 25,775 million tonnes of plastic and 26,000 million tonnes of paper in landfills annually. 2.4 million tonnes of plastic and 1.5 million tonnes of paper are produced yearly.
 
@@ -186,11 +193,11 @@ References:
 https://medium.com/retailcrc/top-5-environmental-sustainability-issues-in-retail-815aa0310779
 
 '''
-Table(food_details,[title_2, wordings_2])
+Table(food_details, [title_2, wordings_2])
 # Table(food_details,[items.table_schema[1],wordings_2])
 
 title_3 = 'Restaurant Waste'
-wordings_3='''
+wordings_3 = '''
 
 Businesses in Australia could have recovered 150,529 tonnes of food waste. This includes keeping 291 million meals out of the trash. Food waste will often occupy 60% of the rubbish bins in a café or restaurant, with the occasional paper and cardboard taking up the remaining 20%. That means 80% of the rubbish bin’s contents could have been recycled or salvaged rather than thrown away.
 
@@ -216,11 +223,11 @@ References:
 https://www.lightspeedhq.com.au/blog/restaurant-sustainability-practices/
 
 '''
-Table(food_details,[title_3, wordings_3])
+Table(food_details, [title_3, wordings_3])
 # Table(food_details,[items.table_schema[1],wordings_3])
 
 title_4 = 'Agricultural waste'
-wordings_4='''
+wordings_4 = '''
 
 In 2017, 30 million tonnes of agricultural waste were generated in Australia, and 5 million tonnes were sent to landfills.
 
@@ -278,7 +285,7 @@ https://earth.org/how-does-food-waste-affect-the-environment/
 https://www.avristech.com/food-waste-impacts-on-environment/
 
 '''
-Table(food_details,[title_4, wordings_4])
+Table(food_details, [title_4, wordings_4])
 # Table(food_details,[items.table_schema[1],wordings_4])
 
 title_5 = 'Processing waste'
@@ -309,7 +316,7 @@ https://www.agriculture.gov.au/
 https://www.dcceew.gov.au/environment/protection/waste/exports/plastic
 
 '''
-Table(food_details,[title_5, wordings_5])
+Table(food_details, [title_5, wordings_5])
 # Table(food_details,[items.table_schema[1],wordings_5])
 
 title_6 = 'Transportation and distribution waste'
@@ -341,5 +348,5 @@ Since transportation uses a lot of energy and burns most of the country’s dies
 References:
 https://www.abs.gov.au/ausstats/abs@.nsf/Previousproducts/1301.0Feature%20Article312003?opendocument&tabname=Summary&prodno=1301.0&issue=2003&num=&view=
 '''
-Table(food_details,[title_6, wordings_6])
+Table(food_details, [title_6, wordings_6])
 # Table(food_details,[items.table_schema[1],wordings_6])
