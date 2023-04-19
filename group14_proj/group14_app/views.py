@@ -61,14 +61,15 @@ def details(request, id):
     return render(request, 'group14_app/details.html', context)
 
 
-def data_model(request):
-    food_waste_list = items.records 
-    team_profiles = contacts.records
-    group_intros = briefs.records
-
-    return render(request, 'group14_app/data-model.html', {'list': food_waste_list, 'group_intros': group_intros, 'team_profiles': team_profiles})
-
 def mitigation(request):
     mitigation_strategies = mitigations.records
 
     return render(request,'group14_app/mitigation.html', {'mitigation_strategies':mitigation_strategies})
+
+def data_model(request):
+    food_waste_list = items.records 
+    team_profiles = contacts.records
+    group_intros = briefs.records
+    mitigation_strategies = mitigations.records
+
+    return render(request, 'group14_app/data-model.html', {'list': food_waste_list, 'group_intros': group_intros, 'team_profiles': team_profiles, 'mitigation_strategies': mitigation_strategies})

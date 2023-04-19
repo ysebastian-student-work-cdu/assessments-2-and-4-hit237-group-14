@@ -9,7 +9,7 @@
 
     <title>
         {% block title %}
-
+        ERROR: No Title Supplied
         {% endblock title %}
     </title>
 
@@ -18,14 +18,9 @@
 
 <body>
     <nav>
-        <div class="menu">
-            <ul>
-                <li><a href="{% url 'homepage' %}">Home</a></li>
-                <li><a href="{% url 'list' %}">List</a></li>
-                <li><a href="{% url 'data_model' %}">Data Model</a></li>
-                <li><a href="{% url 'mitigation' %}">Mitigation</a></li>
-            </ul>
-        </div>
+        {% block nav %}
+        {% include 'group14_app/nav.html' %}
+        {% endblock nav %}
     </nav>
 
     {% block heading %}
@@ -41,9 +36,9 @@
     </main>
 
     <footer>
-        <div class="end">
-            <h4>Copyright - Group 14</h4>
-        </div>
+        {% block footer %}
+        {% include 'group14_app/footer.html' %}
+        {% endblock footer %}
     </footer>
 </body>
 

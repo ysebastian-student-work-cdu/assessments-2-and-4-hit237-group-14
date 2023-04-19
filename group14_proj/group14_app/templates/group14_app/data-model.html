@@ -38,9 +38,21 @@ Data Model
     </div>
 
     <h3>Website Introduction:</h3>
-    {% for group_intro in group_intros %}
-    <p>{{ group_intro.brief}}</p>
-    {% endfor %}
+    <table class="model">
+        <thead>
+            <tr>
+                <th>Brief Introduction</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for group_intro in group_intros %}
+            <tr>
+                <td>{{ group_intro.brief}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+ 
 
     <div class="container">
         <h3>Food Waste List:</h3>
@@ -59,6 +71,28 @@ Data Model
                     <td>{{ food_waste_list.type }}</td>
                     <td>{{ food_waste_list.description }}</td>
                     <td>{{ food_waste_list.id }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h3>Mitigation:</h3>
+
+        <table class="model">
+            <thead>
+                <tr>
+                    <th>Waste Type</th>
+                    <th>Solutions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for mitigation_strategies in mitigation_strategies %}
+                <tr>
+                    <td>{{ mitigation_strategies.one }}</td>
+                    <td>{{ mitigation_strategies.two }} <br> 
+                        {{ mitigation_strategies.three }}</td>                
                 </tr>
                 {% endfor %}
             </tbody>
