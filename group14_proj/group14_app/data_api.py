@@ -57,7 +57,7 @@ items = Create("Item",'type','description','id')
 contacts = Create("contacts","name","id","attendance")
 briefs = Create("intro","brief")
 mitigations = Create("mitigation","one","two","three") 
-fooddetails = Create("food_details","name","desc")
+food_details = Create("food_details","name","desc")
 
 #-----------------------insert records------------------
 
@@ -114,7 +114,7 @@ Increasingly, improper waste management practises and inadequate solid waste col
 Poor management and improper disposal of household waste results in environmental contamination. The water bodies are impacted. Moreover, it modifies the biological, chemical, and physical properties of water bodies. Trash that hasn't been picked up is dispersed throughout the ecosystem, where it seeps into the ground and gets carried by runoff to aquatic areas. The poisonous nature of the garbage contaminates the water. Moreover, it reduces agricultural output and renders the soil sterile.
 '''
 
-Table(fooddetails,[items.table_schema[1],wordings_1])
+Table(food_details,[items.table_schema[1],wordings_1])
 
 wordings_2='''
 A further 31,665 tonnes of plastic and 35,937 tonnes of paper may be recycled yearly by NSW shops. 2.3 million shopping carts full of plastic and 1.5 million carts full of paper would arise from this each year.
@@ -145,7 +145,7 @@ Many retail products contain chemicals as a result of the production process. Ye
 
 One aspect of waste management is the handling of solid waste. Solid waste is generated through the destruction of end-of-product trash, the disposal of shipment packing, and the use of shopping bags. In order to achieve zero waste, many retailers must recycle all solid waste 100 percent of the time.
 '''
-Table(fooddetails,[items.table_schema[1],wordings_2])
+Table(food_details,[items.table_schema[1],wordings_2])
 
 wordings_3='''
 A further 140,529 tonnes of food waste could be recovered by businesses in NSW, or 281 million meals could be kept out of the trash. Food waste often occupies more than 60% of the garbage can in a café or restaurant, with paper and cardboard taking up the remaining 18%. That means that somewhere between 80% and 90% of the garbage can's contents could be recycled or salvaged rather than thrown away.
@@ -164,7 +164,7 @@ Food waste reduction results in a reduction in methane emissions into the atmosp
 
 Lamb and beef are the meats that emit the most emissions. However compared to the next-closest food types, lamb and mutton, beef produces 60 kg (or nearly 2.5 times as much) GHG emissions per kilogramme (kg). By far, the highest source of GHGs is beef. Actually, in Australia, it takes 515 litres to produce just 1 kg of beef fit for a restaurant.
 '''
-Table(fooddetails,[items.table_schema[1],wordings_3])
+Table(food_details,[items.table_schema[1],wordings_3])
 
 wordings_4='''
 In 2016–17, over 30 million tonnes of organic waste were generated in Australia, of which 6.7 million tonnes were sent to landfills.
@@ -202,7 +202,7 @@ Agriculture in general has a negative impact on our biodiversity. Converting wil
 Deforestation and converting lands that are inhabited by our ecosystems to be turned into land that are able to grow crops means obliterating the existing plants and animals, frequently to the point of extinction.
 
 '''
-Table(fooddetails,[items.table_schema[1],wordings_4])
+Table(food_details,[items.table_schema[1],wordings_4])
 
 wordings_5 = '''
 In 2020–21, Australia exported 4.25 million tonnes (Mt) of waste and repurposed goods, totalling $3.2 billion. Even though the tonnage is almost exactly the same as the previous year, the stated value is 12% higher. The 3.9 Mt (91%) of "core waste plus ash" covered by national waste reporting was present in the shipments.
@@ -225,7 +225,7 @@ Given that air pollution is a major issue everywhere, it is crucial to comprehen
 
 The majority of rubbish that is not disposed of in landfills or other facilities ends up in the ocean or another body of water. When the water decays into the ocean, it becomes contaminated and gradually loses its capacity to support life. By this process, the water becomes more poisonous, making it unsafe to swim in any body of water and rendering freshwater unfit for human consumption. Pollutants can contaminate other water sources because water is a great solution and circulates, and therefore they are challenging to remove from the area.
 '''
-Table(fooddetails,[items.table_schema[1],wordings_5])
+Table(food_details,[items.table_schema[1],wordings_5])
 
 
 wordings_6 = '''
@@ -247,4 +247,4 @@ Methane and nitrous oxide are slightly more common in transportation emissions t
 
 Since transportation uses a lot of energy and burns the majority of the world's petroleum, it has a significant influence on the environment. Carbon dioxide generation results in air pollution, including nitrous oxides and particulates, which considerably accelerates global warming.
 '''
-Table(fooddetails,[items.table_schema[1],wordings_6])
+Table(food_details,[items.table_schema[1],wordings_6])

@@ -1,5 +1,4 @@
 from django.shortcuts import render, get_object_or_404
-from group14_app.models import FoodDetail
 from group14_app.data_api import *
 
 
@@ -26,7 +25,7 @@ def list(request):
 def details(request, id):
     
     # food_waste_list = get_object_or_404(FoodDetail, id=id)
-    food_waste_list = fooddetails.get_item(id)
+    food_waste_list = food_details.get_item(id)
 
     context={'food_waste_list':food_waste_list,
              }
