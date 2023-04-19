@@ -120,6 +120,7 @@ https://www.cleanup.org.au/clean-up-our-waste
 '''
 
 Table(food_details,[title_1, wordings_1])
+# Table(food_details,[items.table_schema[1],wordings_1])
 
 title_2 = 'Retail Waste'
 wordings_2='''
@@ -156,6 +157,7 @@ https://medium.com/retailcrc/top-5-environmental-sustainability-issues-in-retail
 
 '''
 Table(food_details,[title_2, wordings_2])
+# Table(food_details,[items.table_schema[1],wordings_2])
 
 title_3 = 'Restaurant Waste'
 wordings_3='''
@@ -177,7 +179,8 @@ References:
 https://www.lightspeedhq.com.au/blog/restaurant-sustainability-practices/
 
 '''
-Table(food_details,[items.table_schema[1],wordings_3])
+Table(food_details,[title_3, wordings_3])
+# Table(food_details,[items.table_schema[1],wordings_3])
 
 title_4 = 'Agricultural waste'
 wordings_4='''
@@ -222,6 +225,7 @@ https://www.avristech.com/food-waste-impacts-on-environment/
 
 '''
 Table(food_details,[title_4, wordings_4])
+# Table(food_details,[items.table_schema[1],wordings_4])
 
 title_5 = 'Processing waste'
 wordings_5 = '''
@@ -251,6 +255,7 @@ https://www.dcceew.gov.au/environment/protection/waste/exports/plastic
 
 '''
 Table(food_details,[title_5, wordings_5])
+# Table(food_details,[items.table_schema[1],wordings_5])
 
 title_6 = 'Transportation and distribution waste'
 wordings_6 = '''
@@ -274,3 +279,4 @@ References:
 https://www.abs.gov.au/ausstats/abs@.nsf/Previousproducts/1301.0Feature%20Article312003?opendocument&tabname=Summary&prodno=1301.0&issue=2003&num=&view=
 '''
 Table(food_details,[title_6, wordings_6])
+# Table(food_details,[items.table_schema[1],wordings_6])
