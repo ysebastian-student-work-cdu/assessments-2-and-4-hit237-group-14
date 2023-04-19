@@ -10,16 +10,16 @@ Details
     {% block heading %}
     <header>
         <section id="hero2">
-            <h1>{{ food_waste_list.name }}</h1>
+            <h1>{{ food_waste_detail.name }}</h1>
         </section>
     </header>
     {% endblock heading %}
 
     {% block content %}
     <div class="container">
-        <p>{{ food_waste_list.desc|linebreaksbr }}</p>
+        <p>{{ food_waste_detail.desc|linebreaksbr }}</p>
     </div>
-    <table>
+    <table class="model">
         <thead>
             <tr>
                 <th>Household Waste</th>

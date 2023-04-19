@@ -87,6 +87,7 @@ Table(mitigations,["Processing Waste", "○ Manage hazardous waste by using spec
 Table(mitigations,["Transportation Waste", "○ Using alternative transporation like bikes, walking, running and etc. will reduce fuel consumption and lower emissions", "○ Sharing shipments with other companies can help reduce the number of trips that needs to be taken from the warehouse and to the destination"])
 
 #insert rows to fooddetails table
+title_1 = 'Household Waste'
 wordings_1 = '''
 Every year, Australians generate 540 kilogrammes of domestic garbage per person. Each person would have to lose more than 10 kg each week. Only 37 of the 67 million tonnes of rubbish that Australians produced in 2017 were recycled, leaving 21.7 to be dumped in landfills. Over 130,000 tonnes of Australian plastic have been entering the ocean annually, causing contamination and affecting economic species.
 
@@ -114,8 +115,9 @@ Increasingly, improper waste management practises and inadequate solid waste col
 Poor management and improper disposal of household waste results in environmental contamination. The water bodies are impacted. Moreover, it modifies the biological, chemical, and physical properties of water bodies. Trash that hasn't been picked up is dispersed throughout the ecosystem, where it seeps into the ground and gets carried by runoff to aquatic areas. The poisonous nature of the garbage contaminates the water. Moreover, it reduces agricultural output and renders the soil sterile.
 '''
 
-Table(food_details,[items.table_schema[1],wordings_1])
+Table(food_details,[title_1, wordings_1])
 
+title_2 = 'Retail Waste'
 wordings_2='''
 A further 31,665 tonnes of plastic and 35,937 tonnes of paper may be recycled yearly by NSW shops. 2.3 million shopping carts full of plastic and 1.5 million carts full of paper would arise from this each year.
 Packing materials including paper, cardboard, and plastic make up over 60% of the trash at a typical retail store.
@@ -145,8 +147,9 @@ Many retail products contain chemicals as a result of the production process. Ye
 
 One aspect of waste management is the handling of solid waste. Solid waste is generated through the destruction of end-of-product trash, the disposal of shipment packing, and the use of shopping bags. In order to achieve zero waste, many retailers must recycle all solid waste 100 percent of the time.
 '''
-Table(food_details,[items.table_schema[1],wordings_2])
+Table(food_details,[title_2, wordings_2])
 
+title_3 = 'Restaurant Waste'
 wordings_3='''
 A further 140,529 tonnes of food waste could be recovered by businesses in NSW, or 281 million meals could be kept out of the trash. Food waste often occupies more than 60% of the garbage can in a café or restaurant, with paper and cardboard taking up the remaining 18%. That means that somewhere between 80% and 90% of the garbage can's contents could be recycled or salvaged rather than thrown away.
 
@@ -164,8 +167,9 @@ Food waste reduction results in a reduction in methane emissions into the atmosp
 
 Lamb and beef are the meats that emit the most emissions. However compared to the next-closest food types, lamb and mutton, beef produces 60 kg (or nearly 2.5 times as much) GHG emissions per kilogramme (kg). By far, the highest source of GHGs is beef. Actually, in Australia, it takes 515 litres to produce just 1 kg of beef fit for a restaurant.
 '''
-Table(food_details,[items.table_schema[1],wordings_3])
+Table(food_details,[title_3, wordings_3])
 
+title_4 = 'Agricultural waste'
 wordings_4='''
 In 2016–17, over 30 million tonnes of organic waste were generated in Australia, of which 6.7 million tonnes were sent to landfills.
 
@@ -202,8 +206,9 @@ Agriculture in general has a negative impact on our biodiversity. Converting wil
 Deforestation and converting lands that are inhabited by our ecosystems to be turned into land that are able to grow crops means obliterating the existing plants and animals, frequently to the point of extinction.
 
 '''
-Table(food_details,[items.table_schema[1],wordings_4])
+Table(food_details,[title_4, wordings_4])
 
+title_5 = 'Processing waste'
 wordings_5 = '''
 In 2020–21, Australia exported 4.25 million tonnes (Mt) of waste and repurposed goods, totalling $3.2 billion. Even though the tonnage is almost exactly the same as the previous year, the stated value is 12% higher. The 3.9 Mt (91%) of "core waste plus ash" covered by national waste reporting was present in the shipments.
 
@@ -225,9 +230,9 @@ Given that air pollution is a major issue everywhere, it is crucial to comprehen
 
 The majority of rubbish that is not disposed of in landfills or other facilities ends up in the ocean or another body of water. When the water decays into the ocean, it becomes contaminated and gradually loses its capacity to support life. By this process, the water becomes more poisonous, making it unsafe to swim in any body of water and rendering freshwater unfit for human consumption. Pollutants can contaminate other water sources because water is a great solution and circulates, and therefore they are challenging to remove from the area.
 '''
-Table(food_details,[items.table_schema[1],wordings_5])
+Table(food_details,[title_5, wordings_5])
 
-
+title_6 = 'Transportation and distribution waste'
 wordings_6 = '''
 78% of Australians who were 18 years of age and older typically used a private motor vehicle to get to work or full-time school in March 2012, while 16% made use of public transit. New South Wales and Queensland had the greatest percentages of people using public transit, with 21% and 17%, respectively.
 
@@ -247,4 +252,4 @@ Methane and nitrous oxide are slightly more common in transportation emissions t
 
 Since transportation uses a lot of energy and burns the majority of the world's petroleum, it has a significant influence on the environment. Carbon dioxide generation results in air pollution, including nitrous oxides and particulates, which considerably accelerates global warming.
 '''
-Table(food_details,[items.table_schema[1],wordings_6])
+Table(food_details,[title_6, wordings_6])

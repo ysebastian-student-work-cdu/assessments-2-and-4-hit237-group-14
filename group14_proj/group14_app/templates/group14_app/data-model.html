@@ -52,8 +52,7 @@ Data Model
             {% endfor %}
         </tbody>
     </table>
- 
-
+    
     <div class="container">
         <h3>Food Waste List:</h3>
 
@@ -71,6 +70,27 @@ Data Model
                     <td>{{ food_waste_list.type }}</td>
                     <td>{{ food_waste_list.description }}</td>
                     <td>{{ food_waste_list.id }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h3>Food Waste Details:</h3>
+
+        <table class="model">
+            <thead>
+                <tr>
+                    <th>Waste Type</th>
+                    <th>Explanation</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for food_waste_detail in context %}
+                <tr>
+                    <td>{{ food_waste_detail.name }}</td>
+                    <td>{{ food_waste_detail.desc }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
