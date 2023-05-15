@@ -1,0 +1,56 @@
+{% extends "group14_app/app_base.html" %}
+{% load static %}
+
+{% block title %}
+Details
+{% endblock title %}
+
+
+<body>
+    {% block heading %}
+    <header>
+        <section id="hero2">
+            <h1>{{ food_waste_detail.name }}</h1>
+        </section>
+    </header>
+    {% endblock heading %}
+
+    {% block content %}
+    <div class="container">
+        <p>{{ food_waste_detail.desc|linebreaksbr }}</p>
+    </div>
+    <table class="model">
+        <thead>
+            <tr>
+                <th>Household Waste</th>
+                <th>Retail Waste</th>
+                <th>Restaurant Waste</th>
+                <th>Agricultural Waste</th>
+                <th>Processing Waste</th>
+                <th>Transportation Waste</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>67 million tonnes per year</td>
+                <td>56 million tonnes per year</td>
+                <td>45 million tonnes per year</td>
+                <td>34 million tonnes per year</td>
+                <td>45 million tonnes per year</td>
+                <td>64 million tonnes per year</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <p>‎ </p>
+        <p> Below shows the process of how food is wasted every year and the impacts</p>
+        <p>‎ </p>
+        <img src="{% static 'assets/wastes.jpg' %}" />
+    </div>
+    {% endblock content %}
+
+    {% block info %}
+
+    {% endblock info %}
+
+</body>

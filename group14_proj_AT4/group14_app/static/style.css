@@ -1,0 +1,236 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	background: rgba(249, 249, 249, 0.316);
+	min-height: 100vh;
+}
+
+/* Menu Bar */
+nav {
+	z-index: 999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0px;
+	transition: 0.3s;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.408);
+}
+
+nav .menu {
+	margin-left: 4%;
+	position: relative;
+	display: flex;
+}
+
+.menu ul {
+	display: flex;
+	list-style: none;
+}
+
+nav .menu li a {
+	font-size: 20px;
+	text-decoration: none;
+	margin: 0 50px;
+	padding: 0px 20px;
+	color: white;
+	cursor: pointer;
+	border-radius: 20px;
+	transition: 0.3s;
+	transition-property: color, background;
+}
+
+nav .menu li a:hover {
+	color: white;
+	background: rgba(13, 240, 172, 0.5);
+}
+
+
+/* Homepage */
+#hero {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background: url(assets/home.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 300px 1;
+}
+
+/* Apply to all pages */
+header {
+	font-size: 25px;
+	color: white;
+	text-align: center;
+}
+
+/* Apply to all pages */
+main {
+	text-align: center;
+}
+
+.container {
+	margin: 20px 0;
+}
+
+table {
+	border-collapse: collapse;
+	font-family: Tahoma, Geneva, sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table th {
+	padding: 15px;
+}
+
+table td {
+	padding: 15px;
+}
+
+table thead th {
+	background-color: rgb(5, 134, 121);
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 13px;
+	border: 1px solid rgb(5, 134, 121);
+}
+
+table tbody td {
+	color: #636363;
+	border: 1px solid rgb(5, 134, 121);
+}
+
+table tbody tr {
+	background-color: #fbfaf9;
+}
+
+table tbody tr:nth-child(odd) {
+	background-color: #ffffff;
+}
+
+.text-center {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h3 {
+	color: rgb(5, 134, 121);
+	font-size: 25px;
+	padding-bottom: 20px;
+}
+
+p {
+	padding: 0 20px;
+}
+
+/* List Page */
+#hero1 {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background: url(assets/list.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 300px 1;
+}
+
+.category {
+	margin: 3%;
+}
+
+a {
+	color: rgb(5, 134, 121);
+}
+
+/* Details Page */
+#hero2 {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background: url(assets/details.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 300px 1;
+}
+
+/* Data Model */
+#hero3 {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background: url(assets/datamodel.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 300px 1;
+}
+
+.model {
+	width: 80%;
+}
+
+/* Mitigation */
+#hero4 {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background: url(assets/mitigation.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 300px 1;
+}
+
+h2 {
+	color: rgb(5, 134, 121);
+}
+
+/* Footer */
+.end {
+	margin-top: 4%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0;
+	background: rgb(5, 134, 121);
+}
+
+.end h4 {
+	color: white;
+}
+
+.end p {
+	color: white;
+}
+
+img {
+	width: 800px;
+	height: 800px;
+}

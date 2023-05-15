@@ -1,0 +1,45 @@
+{% load static %}
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        ERROR: No Title Supplied
+        {% endblock title %}
+    </title>
+
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+</head>
+
+<body>
+    <nav>
+        {% block nav %}
+        {% include 'group14_app/nav.html' %}
+        {% endblock nav %}
+    </nav>
+
+    {% block heading %}
+    <header>
+        <h1>ERROR: No Heading Supplied</h1>
+    </header>
+    {% endblock heading %}
+
+    <main>
+        {% block content %}
+        <h1>ERROR: No Content Supplied</h1>
+        {% endblock content%}
+    </main>
+
+    <footer>
+        {% block footer %}
+        {% include 'group14_app/footer.html' %}
+        {% endblock footer %}
+    </footer>
+</body>
+
+</html>

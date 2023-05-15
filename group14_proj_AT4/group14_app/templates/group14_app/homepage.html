@@ -1,0 +1,46 @@
+{% extends "group14_app/app_base.html" %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block heading %}
+<header>
+    <section id="hero">
+        <h1>Group 14 - Food Waste Problems and Mitigation</h1>
+    </section>
+</header>
+{% endblock heading %}
+
+{% block content %}
+<main>
+    <div class="container">
+        <h3>Team profile Names and Student IDs:</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Student Id</th>
+                    <th>Attendance Mode</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for team_profile in team_profiles %}
+                <tr>
+                    <td>{{ team_profile.name }}</td>
+                    <td>{{ team_profile.id }}</td>
+                    <td>{{ team_profile.attendance }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Our Website Introduction:</h3>
+    {% for group_intro in group_intros %}
+    <p>{{ group_intro.brief}}</p>
+    {% endfor %}
+
+</main>
+{% endblock content %}
