@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from group14_app.data_api import *
+from django.http import HttpResponseRedirect
+from .forms import ContactForm
 
 
 # Create your views here.
@@ -45,3 +47,17 @@ def data_model(request):
     mitigation_strategies = mitigations.get_records()
 
     return render(request, 'group14_app/data-model.html', {'group_intros': group_intros, 'team_profiles': team_profiles, 'list': food_waste_list, 'context': food_waste_detail, 'mitigation_strategies': mitigation_strategies})
+
+def contact(request):
+    submitted = False
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/')
+    else:
+        form = ContactForm
+        if 'submitted' in request.GET:
+            submitted = True    
+    form = ContactForm
+    return render(request, 'group14_app/contact.html', {'form': form, 'submitted':submitted})

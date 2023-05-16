@@ -1,0 +1,27 @@
+{% extends "group14_app/app_base.html" %}
+{% load static %}
+
+{% block title %}
+Contact
+{% endblock title %}
+
+{% block content %}
+    <div class="center">
+    <h1>Contact Us</h1>
+    <br/><br/>
+    {% if submitted %}
+        Your contact details has been submitted successfully!
+
+    {% else %}
+
+        <form action="" method=POST>
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <input type="submit" value="Submit" class="btn btn-secondary">
+
+        </form>
+    {% endif %}
+    </div>
+{% endblock %}
