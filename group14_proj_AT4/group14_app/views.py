@@ -54,7 +54,7 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('/contact?submitted=True')
     else:
         form = ContactForm
         if 'submitted' in request.GET:
