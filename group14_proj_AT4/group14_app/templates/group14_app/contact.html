@@ -5,10 +5,17 @@
 Contact
 {% endblock title %}
 
+{% block heading %}
+<header>
+    <section id="hero4">
+        <h1>Group 14 - Contact Us</h1>
+    </section>
+</header>
+{% endblock heading %}
+
 {% block content %}
-    <div class="center">
-    <h1>Contact Us</h1>
-    <br/><br/>
+<main>
+    <div class="container">
 
     {% if submitted %}
         Your contact details has been submitted successfully!
@@ -18,11 +25,12 @@ Contact
         <form action="" method=POST>
             {% csrf_token %}
 
-            {{ form.as_p }}
+            <br>{{ form.as_p }}</br>
 
             <input type="submit" value="Submit" class="btn btn-secondary">
 
         </form>
     {% endif %}
     </div>
+</main>
 {% endblock %}

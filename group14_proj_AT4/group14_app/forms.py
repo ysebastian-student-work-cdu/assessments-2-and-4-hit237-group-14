@@ -7,16 +7,16 @@ class ContactForm(ModelForm):
         model = Contact
         fields = ('name', 'email', 'subject', 'message')
         labels = {
-            'name': '',
-            'email': '',
-            'subject': '',
-            'message': '',
+            'name': 'Full Name',
+            'email': 'Email Address',
+            'subject': 'Subject',
+            'message': 'Message',
         }
         widgets = {
-            'name': forms.TextInput(attrs={'placeholder':'Full Name'}),
-            'email': forms.EmailInput(attrs={'placeholder':'Email Address'}),
-            'subject': forms.TextInput(attrs={'placeholder':'Subject'}),
-            'message': forms.Textarea(attrs={'rows':5, 'placeholder':'Message'}),
+            'name': forms.TextInput(attrs={'class': 'form-input','placeholder':'Full Name', 'style': 'height:30px; width:100%;'}),
+            'email': forms.EmailInput(attrs={'class': 'form-input','placeholder':'Email Address', 'style':' height:30px; width:100%;'}),
+            'subject': forms.TextInput(attrs={'class': 'form-input','placeholder':'Subject', 'style':' height:30px; width:100%;'}),
+            'message': forms.Textarea(attrs={'class': 'form-input','rows':5, 'placeholder':'Message', 'style': 'height:80px; width:100%;'}),
         }
 
 class LogForm(ModelForm):
