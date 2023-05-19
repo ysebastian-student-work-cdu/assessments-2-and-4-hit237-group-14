@@ -28,6 +28,11 @@ urlpatterns = [
     path('data_model/', views.data_model, name='data_model'),
     path('mitigation/', views.mitigation, name='mitigation'),
     path('contact/', views.contact, name='contact'),
+    path('wastelog/', views.log_form, name='logform'),
+    path('wastelog/list/<int:id>/', views.log_form, name='logupdate'),
+    path('wastelog/delete/<int:id>/', views.log_delete, name='logdelete'),
+    path('wastelog/list/', views.log_list, name='loglist'),
+    
 ]
 
 urlpatterns += staticfiles_urlpatterns()

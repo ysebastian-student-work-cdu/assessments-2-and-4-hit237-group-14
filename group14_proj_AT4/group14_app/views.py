@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from group14_app.data_api import *
 from django.http import HttpResponseRedirect
-from .forms import ContactForm
+from .forms import ContactForm, LogForm
+from .models import WasteLog
 
 
 # Create your views here.
@@ -61,3 +62,30 @@ def contact(request):
             submitted = True    
     form = ContactForm
     return render(request, 'group14_app/contact.html', {'form': form, 'submitted':submitted})
+
+def log_list(request):
+    context = {"log_list":WasteLog.objects.all()}
+    return render(request, 'group14_app/log_list.html', context)
+
+def log_form(request, id=0):
+    if request.method == "GET":
+        if id==0:
+            form = LogForm()
+        else:
+            log = WasteLog.objects.get(pk=id)
+            form = LogForm(instance=log)
+        return render(request, 'group14_app/log_form.html', {'form': form})
+    else:
+        if id==0:
+            form = LogForm(request.POST)
+        else:
+            log = WasteLog.objects.get(pk=id)
+            form = LogForm(request.POST, instance=log)
+        if form.is_valid():
+            form.save()
+        return redirect('/wastelog/list/')
+    
+def log_delete(request, id):
+    log = WasteLog.objects.get(pk=id)
+    log.delete()
+    return redirect('/wastelog/list/')

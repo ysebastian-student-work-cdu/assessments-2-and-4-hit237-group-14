@@ -42,7 +42,7 @@ nav .menu li a {
 	font-size: 20px;
 	text-decoration: none;
 	margin: 0 50px;
-	padding: 0px 20px;
+	padding: 0px 5px;
 	color: white;
 	cursor: pointer;
 	border-radius: 20px;
@@ -211,6 +211,100 @@ h2 {
 	color: rgb(5, 134, 121);
 }
 
+/* Food Waste Log */
+#hero5 {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background: url(assets/log.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 300px 1;
+}
+
+/* Food Waste Log List */
+.container1 {
+	margin: 20px 0;
+}
+
+.container1 h3 {
+	padding-top: 50px;
+}
+
+.log {
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	background: rgba(238, 235, 235, 0.552);
+	padding: 20px 0;
+	width: 70%;
+	margin-left: 15%;
+}
+
+.log input {
+	margin: 20px;
+	width: 30%;
+	padding: 5px;
+}
+
+.log select {
+	margin: 20px;
+	width: 20%;
+	padding: 5px;
+}
+
+.button {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 10px 22px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.button1 {
+	background-color: #fdfdfd;
+	border: none;
+	padding: 10px 22px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	border: solid rgb(5, 134, 121);
+}
+
+.button2 {
+	margin-top: 20px;
+	background-color: #d4f0cc;
+	border: none;
+	padding: 10px 22px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.button3 {
+	border: none;
+	padding: 10px 22px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	border: solid rgb(243, 45, 42);
+}
+
 /* Footer */
 .end {
 	margin-top: 4%;
@@ -234,6 +328,7 @@ img {
 	width: 800px;
 	height: 800px;
 }
+
 .form {
-    width: 300px;   
+	width: 300px;
 }

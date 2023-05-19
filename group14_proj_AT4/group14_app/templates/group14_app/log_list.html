@@ -1,0 +1,58 @@
+{% extends "group14_app/app_base.html" %}
+
+{% block title %}
+Log List
+{% endblock title %}
+
+{% block heading %}
+{% endblock heading %}
+
+{% block content %}
+<main>
+    <div class="container1">
+        <h3>The Record of Our Food Waste Log:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Organisation</th>
+                    <th>Full Name</th>
+                    <th>Waste Type</th>
+                    <th>Food Name</th>
+                    <th>Disposal Date</th>
+                    <th>Loss Reason</th>
+                    <th>Measurement</th>
+                    <th>Food Size</th>
+                    <th>Recorded By</th>
+                    <th>Action 1</th>
+                    <th>Action 2</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for log in log_list %}
+                <tr>
+                    <td>{{log.organisation}}</td>
+                    <td>{{log.fullname}}</td>
+                    <td>{{log.wastetype}}</td>
+                    <td>{{log.foodname}}</td>
+                    <td>{{log.date}}</td>
+                    <td>{{log.reason}}</td>
+                    <td>{{log.measurement}}</td>
+                    <td>{{log.foodsize}}</td>
+                    <td>{{log.recorded}}</td>
+                    <td> <a href="{% url 'logupdate' log.id %}">Update</a></td>
+                    <td>
+                        <form action="{% url 'logdelete' log.id %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="button3">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <button type="submit" class="button1"> <a href="{% url 'logform' %}">Add New Record</a></button>
+
+</main>
+{% endblock content %}
