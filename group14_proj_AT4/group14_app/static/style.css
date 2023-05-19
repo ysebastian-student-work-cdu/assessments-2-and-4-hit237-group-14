@@ -329,6 +329,16 @@ img {
 	height: 800px;
 }
 
-.form {
-	width: 300px;
+/* Contact */
+#hero6 {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background: url(assets/contact.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 300px 1;
 }
