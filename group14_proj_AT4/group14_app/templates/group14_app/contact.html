@@ -18,16 +18,16 @@ Contact
     <div class="container">
 
     {% if submitted %}
-        Your contact details has been submitted successfully!
+        Your queries has been submitted successfully!
 
     {% else %}
         
-        <form action="" method=POST>
+        <form class="log"  action="" method=POST>
             {% csrf_token %}
 
             <br>{{ form.as_p }}</br>
 
-            <input type="submit" value="Submit" class="btn btn-secondary">
+            <button type="submit" class="button">Submit</button>
 
         </form>
     {% endif %}
