@@ -16,7 +16,7 @@ class ContactForm(ModelForm):
             'name': forms.TextInput(attrs={'class': 'form-input','placeholder':'Full Name', 'style': 'height:30px; width:100%;'}),
             'email': forms.EmailInput(attrs={'class': 'form-input','placeholder':'Email Address', 'style':' height:30px; width:100%;'}),
             'subject': forms.TextInput(attrs={'class': 'form-input','placeholder':'Subject', 'style':' height:30px; width:100%;'}),
-            'message': forms.Textarea(attrs={'class': 'form-input','rows':5, 'placeholder':'Message', 'style': 'height:80px; width:100%;'}),
+            'message': forms.Textarea(attrs={'class': 'form-input','rows':5, 'placeholder':'Tell us what we can help you with', 'style': 'height:80px; width:100%;'}),
         }
 
 class LogForm(ModelForm):
