@@ -1,0 +1,14 @@
+{% extends 'admin_g14/master.html' %}
+
+
+{%block table%}
+    {%for model in app_models%} 
+    <tr>
+        <td class="my-icon-regular">{{model}}</td>
+        <td><a class="add-link" href={%url 'create' model%}><i class="fas fa-plus"></i></a><br></td>
+        <td><a class="add-link" href={%url 'view' model%}><i class="fas fa-pencil-alt"></i></a></td>
+        <td><a class="add-link" href={%url 'delete' model%}><i class="far fa-trash-alt"></i></a></td>
+    </tr>
+    {%endfor%}
+{% endblock %}
+

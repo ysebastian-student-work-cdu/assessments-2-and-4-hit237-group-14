@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from group14_app import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
@@ -32,7 +32,7 @@ urlpatterns = [
     path('wastelog/list/<int:id>/', views.log_form, name='logupdate'),
     path('wastelog/delete/<int:id>/', views.log_delete, name='logdelete'),
     path('wastelog/list/', views.log_list, name='loglist'),
-    
+    path('admin-g14',include('admin_g14.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

@@ -1,0 +1,15 @@
+
+
+{% if edit %}   
+    <form action={%url 'save' model pk%} method="post" novalidate>
+        <table>
+        {{ editform.as_table }}
+        <tr>
+        <td>&nbsp;</td>
+        <td><input type="submit" value="Save"></td>
+        </tr>
+        </table>
+        {% csrf_token %}
+    </form>
+{% endif %}
+

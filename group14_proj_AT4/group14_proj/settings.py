@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     
     #user-defined apps 
     'group14_app.apps.Group14AppConfig',
+    'admin_g14',
 ]
 
 MIDDLEWARE = [
