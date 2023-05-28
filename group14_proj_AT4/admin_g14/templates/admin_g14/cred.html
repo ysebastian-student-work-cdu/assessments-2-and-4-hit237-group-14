@@ -44,7 +44,7 @@
             {%if deleted%}
                 <p class="success">
                     Record/s are succesfully deleted. Thank you.
-                <br><a href ={%url 'home'%}>Go to Admin home Page<br>
+                <br><a href ={%url 'admin-home'%}>Go to Admin home Page<br>
             {%else%}
                 <form action={%url 'delete' model%} method="post" novalidate>
                     <table>
