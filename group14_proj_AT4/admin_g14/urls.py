@@ -5,7 +5,7 @@ from admin_g14 import views
 # app_name = 'notices'
 
 urlpatterns = [
-    path('',views.model_list,name='home'),
+    path('',views.model_list,name='admin-home'),
     path('<str:model>/create', views.create, name='create'),
     path('<str:model>/view', views.view, name='view'),
     path('<str:model>/delete', views.delete, name='delete'),
