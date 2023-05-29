@@ -44,7 +44,7 @@ def view(request,model=''):
     model_class = apps.get_model('admin_g14',model)
     rows = model_class.objects.filter()
     if not rows.exists():
-        return HttpResponse("no records found.<br><a href ='/foodwaste_admin'>Go to Admin home Page<br>")
+        return HttpResponse("no records found.<br><a href ='/admin-home'>Go to Admin home Page<br>")
     else:
         return render(request,'admin_g14/cred.html',{'rows':rows,'model':model,'view':True,'delete':False})
     
@@ -65,7 +65,7 @@ def save(request, model='',pk=''):
         form=MODELE_FORMS[model_class](request.POST,instance=a)
         if form.is_valid():
             form.save()
-        return HttpResponseRedirect('/foodwaste_admin')
+        return HttpResponseRedirect('/admin-home')
  
 def delete(request,model=''):
     error=''
@@ -82,7 +82,7 @@ def delete(request,model=''):
             return render(request,'admin_g14/cred.html',{'rows':rows,'model':model,'view':False,'delete':True,'error':error})
     else:
         if not rows.exists():
-            return HttpResponse("no records found.<br><a href ='/foodwaste_admin'>Go to Admin home Page<br>")
+            return HttpResponse("no records found.<br><a href ='/admin-home'>Go to Admin home Page<br>")
         else:
             return render(request,'admin_g14/cred.html',{'rows':rows,'model':model,'view':False,'delete':True,'error':error})
     
