@@ -45,7 +45,6 @@ class WasteCat(models.Model):
     
 class WasteItem(models.Model):
     name = models.CharField(max_length=100)
-    description = models.CharField(max_length=120)
     waste_category = models.ForeignKey(WasteCat,on_delete=models.CASCADE)
     
     def __str__(self):
