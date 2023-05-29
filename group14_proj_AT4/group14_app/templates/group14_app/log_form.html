@@ -18,7 +18,7 @@ Food Waste Log
         <h3>Our Food Waste Log:</h3>
         <p>Fill out the form below to track your waste details!</p>
         <br></br>
-        <form class= "log" action={%url %} method="post" autocomplete="off">
+        <form class= "log" action='' method="post" autocomplete="off">
             {% csrf_token %}
             {{form.as_table}}
             <button type="submit" class="button">Submit</button>
