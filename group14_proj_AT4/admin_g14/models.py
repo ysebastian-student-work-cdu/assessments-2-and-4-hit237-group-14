@@ -37,8 +37,8 @@ class Location(models.Model):
 
     
 class WasteCat(models.Model):
-    name = models.CharField(max_length=20)
-    description = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    description = models.CharField(max_length=1000)
     
     def __str__(self):
         return self.name
@@ -46,7 +46,6 @@ class WasteCat(models.Model):
 class WasteItem(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=120)
-    location = models.ManyToManyField(Location)
     waste_category = models.ForeignKey(WasteCat,on_delete=models.CASCADE)
     
     def __str__(self):
