@@ -41,4 +41,7 @@ class FormWasteLog(ModelForm):
             fields = ['log_id','name','location','organization','waste_item','waste_quantity','datetime','created_by']
             widgets = {
             'datetime': DateTimeInput(attrs={'type': 'date'}),
-        }
+            'waste_item': forms.Select(attrs={'style': 'width: 500px;'}),
+            'organization': forms.Select(attrs={'style': 'width: 500px;'}),
+            'location': forms.Select(attrs={'style': 'width: 500px;'})
+            }

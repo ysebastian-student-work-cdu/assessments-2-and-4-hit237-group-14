@@ -20,7 +20,9 @@ Food Waste Log
         <br></br>
         <form class= "log" action='' method="post" autocomplete="off">
             {% csrf_token %}
-            {{form.as_table}}
+            <table>
+                {{ form.as_table }}
+            </table>
             <button type="submit" class="button">Submit</button>
             <button type="submit" class="button2"> <a href="{% url 'loglist' %}">See Our Records!</a></button>
         </form>
