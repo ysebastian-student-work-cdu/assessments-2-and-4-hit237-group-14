@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from group14_app.data_api import *
 from django.http import HttpResponseRedirect
 from .forms import ContactForm, LogForm
-from .models import WasteLog
+from admin_g14.models import WasteLog
+from admin_g14.forms import FormWasteLog
 
 
 # Create your views here.
@@ -64,23 +65,29 @@ def contact(request):
     return render(request, 'group14_app/contact.html', {'form': form, 'submitted':submitted})
 
 def log_list(request):
-    context = {"log_list":WasteLog.objects.all()}
+    field_names = [field.name for field in WasteLog._meta.get_fields()][1:]
+    context = {"log_list":WasteLog.objects.all(),"field_names":field_names}
     return render(request, 'group14_app/log_list.html', context)
 
 def log_form(request, id=0):
     if request.method == "GET":
         if id==0:
-            form = LogForm()
+            form = FormWasteLog()
         else:
             log = WasteLog.objects.get(pk=id)
-            form = LogForm(instance=log)
+            form = FormWasteLog(instance=log)
         return render(request, 'group14_app/log_form.html', {'form': form})
+    if request.method =='POST':
+        form = FormWasteLog(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/wastelog/list/')
     else:
         if id==0:
-            form = LogForm(request.POST)
+            form = FormWasteLog(request.POST)
         else:
             log = WasteLog.objects.get(pk=id)
-            form = LogForm(request.POST, instance=log)
+            form = FormWasteLog(request.POST, instance=log)
         if form.is_valid():
             form.save()
         return redirect('/wastelog/list/')

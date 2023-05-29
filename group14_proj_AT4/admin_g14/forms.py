@@ -1,18 +1,13 @@
 from .models import *
 from django import forms
 from django.forms import ModelForm
+from django.forms import DateTimeInput
 
 
 class FormOrganization(ModelForm):
     required_css_class = 'required'
     class Meta:
         model = Organization
-        fields = '__all__'
-
-class FormRole(ModelForm):
-    required_css_class = 'required'
-    class Meta:
-        model = Role
         fields = '__all__'
 
 class FormUser(ModelForm):
@@ -40,10 +35,10 @@ class FormWasteItem(ModelForm):
         fields = '__all__'
 
 class FormWasteLog(ModelForm):
-    required_css_class = 'required'
-    class Meta:
-        model = WasteLog
-        fields = '__all__'
-        widgets = {
-            'datetime': forms.DateTimeInput(attrs={'class': 'datetimepicker'}),
+        required_css_class = 'required'
+        class Meta:
+            model = WasteLog
+            fields = ['log_id','name','location','organization','waste_item','waste_quantity','datetime','created_by']
+            widgets = {
+            'datetime': DateTimeInput(attrs={'type': 'date'}),
         }

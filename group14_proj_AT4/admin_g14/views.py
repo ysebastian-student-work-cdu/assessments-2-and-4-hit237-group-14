@@ -9,7 +9,7 @@ from django.urls import reverse
 
 
 #dictionry to map model classes to their corresponding Forms 
-MODELE_FORMS = {Organization:FormOrganization, Role:FormRole, User:FormUser, Location:FormLocation, WasteCat:FormWasteCat, WasteItem:FormWasteItem, WasteLog:FormWasteLog}
+MODELE_FORMS = {Organization:FormOrganization, User:FormUser, Location:FormLocation, WasteCat:FormWasteCat, WasteItem:FormWasteItem, WasteLog:FormWasteLog}
 
 def get_model_record_to_form(request,model='',pk=''):
     model_class = apps.get_model('admin_g14',model)
@@ -86,4 +86,3 @@ def delete(request,model=''):
             return HttpResponse("no records found.<br><a href ='/admin-home'>Go to Admin home Page<br>")
         else:
             return render(request,'admin_g14/cred.html',{'rows':rows,'model':model,'view':False,'delete':True,'error':error})
-    

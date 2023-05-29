@@ -11,18 +11,10 @@ class Organization(models.Model):
     def __str__(self):
         return self.name
 
-class Role(models.Model):
-    titile = models.CharField(max_length=100)
-    code = models.CharField(max_length=20)
-    organization_name = models.ForeignKey(Organization,on_delete=models.CASCADE)
-    
-    def __str__(self):
-        return self.code
 
 class User(models.Model):
     organization = models.ForeignKey('Organization', on_delete=models.CASCADE,to_field='name')
     name = models.CharField(max_length=100)
-    role = models.ForeignKey(Role, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.name
@@ -52,16 +44,16 @@ class WasteItem(models.Model):
     
 class WasteLog(models.Model):
     log_id = models.CharField(max_length=10, unique=True)
-    description = models.CharField(max_length=100)
-    location = models.ManyToManyField(Location)
-    organization = models.ManyToManyField(Organization)
-    waste_item = models.ManyToManyField(WasteItem)
+    name = models.CharField(max_length=100)
     waste_quantity = models.FloatField()
     datetime = models.DateTimeField()
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    location = models.ManyToManyField(Location)
+    organization = models.ManyToManyField(Organization)
+    waste_item = models.ManyToManyField(WasteItem)
     
     def __str__(self):
-        return self.audit_id
+        return self.name
     
 
     
