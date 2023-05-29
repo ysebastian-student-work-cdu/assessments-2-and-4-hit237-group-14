@@ -39,10 +39,10 @@ class FormWasteItem(ModelForm):
         model = WasteItem
         fields = '__all__'
 
-class FormAudit(ModelForm):
+class FormWasteLog(ModelForm):
     required_css_class = 'required'
     class Meta:
-        model = Audit
+        model = WasteLog
         fields = '__all__'
         widgets = {
             'datetime': forms.DateTimeInput(attrs={'class': 'datetimepicker'}),

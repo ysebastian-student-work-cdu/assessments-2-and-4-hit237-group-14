@@ -4,5 +4,5 @@ from django.contrib import admin
 from admin_g14.models import *
 
 # Register your models here.
-myModels = [Organization,Role,User,Location,WasteCat,WasteItem,Audit]
+myModels = [Organization,Role,User,Location,WasteCat,WasteItem,WasteLog]
 admin.site.register(myModels)

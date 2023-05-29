@@ -7,8 +7,9 @@ from django.db import models
 from django.urls import reverse
 
 
+
 #dictionry to map model classes to their corresponding Forms 
-MODELE_FORMS = {Organization:FormOrganization, Role:FormRole, User:FormUser, Location:FormLocation, WasteCat:FormWasteCat, WasteItem:FormWasteItem, Audit:FormAudit}
+MODELE_FORMS = {Organization:FormOrganization, Role:FormRole, User:FormUser, Location:FormLocation, WasteCat:FormWasteCat, WasteItem:FormWasteItem, WasteLog:FormWasteLog}
 
 def get_model_record_to_form(request,model='',pk=''):
     model_class = apps.get_model('admin_g14',model)

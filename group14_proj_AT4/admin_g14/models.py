@@ -52,12 +52,15 @@ class WasteItem(models.Model):
     def __str__(self):
         return self.name
     
-class Audit(models.Model):
-    audit_id = models.CharField(max_length=10)
-    user = models.ForeignKey(User,on_delete=models.CASCADE)
+class WasteLog(models.Model):
+    log_id = models.CharField(max_length=10, unique=True)
+    description = models.CharField(max_length=100)
+    location = models.ManyToManyField(Location)
+    organization = models.ManyToManyField(Organization)
     waste_item = models.ManyToManyField(WasteItem)
     waste_quantity = models.FloatField()
     datetime = models.DateTimeField()
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.audit_id
