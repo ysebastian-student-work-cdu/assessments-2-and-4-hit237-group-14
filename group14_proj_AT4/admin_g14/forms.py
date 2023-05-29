@@ -45,3 +45,9 @@ class FormWasteLog(ModelForm):
             'organization': forms.Select(attrs={'style': 'width: 500px;'}),
             'location': forms.Select(attrs={'style': 'width: 500px;'})
             }
+            labels = {
+            'name': 'Description',
+            'waste_quantity' : 'Quantity Wasted (in Kg)',
+            'datetime' : ' Date',
+            'created_by' : 'Who am I'
+        }
