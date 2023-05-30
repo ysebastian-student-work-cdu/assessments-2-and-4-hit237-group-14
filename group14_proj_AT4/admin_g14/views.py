@@ -3,8 +3,7 @@ from django.apps import apps
 from .models import *
 from .forms import *
 from django.http import HttpResponseRedirect, HttpResponse
-from django.db import models
-from django.urls import reverse
+
 
 
 
@@ -86,3 +85,12 @@ def delete(request,model=''):
             return HttpResponse("no records found.<br><a href ='/admin-home'>Go to Admin home Page<br>")
         else:
             return render(request,'admin_g14/cred.html',{'rows':rows,'model':model,'view':False,'delete':True,'error':error})
+
+def register(request):
+    with connection.cursor() as cursor:
+        output = cursor.execute("SELECT * FROM admin_g14_wastelog")
+        raw = cursor.fetchall()
+    forms = raw
+    
+    return render(request, 'admin_g14/register.html',{"forms":forms})
+    
