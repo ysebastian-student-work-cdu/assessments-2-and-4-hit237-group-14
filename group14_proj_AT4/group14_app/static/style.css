@@ -27,18 +27,6 @@ nav {
 	background: rgba(0, 0, 0, 0.408);
 }
 
-@media screen and (max-width: 768px) {
-	.menu li a {
-	  font-size: 6px; /* Set font size for smaller screens */
-	}
-  }
-  
-  @media screen and (min-width: 769px) {
-	.menu li a {
-	  font-size: 20px; /* Set font size for larger screens */
-	}
-  }
-
 nav .menu {
 	margin-left: 4%;
 	position: relative;
