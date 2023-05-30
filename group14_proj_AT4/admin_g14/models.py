@@ -11,10 +11,18 @@ class Organization(models.Model):
     def __str__(self):
         return self.name
 
+class Role(models.Model):
+    titile = models.CharField(max_length=100)
+    code = models.CharField(max_length=20)
+    organization_name = models.ForeignKey(Organization,on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.code
 
 class User(models.Model):
     organization = models.ForeignKey('Organization', on_delete=models.CASCADE,to_field='name')
     name = models.CharField(max_length=100)
+    role = models.ForeignKey(Role, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.name
@@ -29,31 +37,30 @@ class Location(models.Model):
 
     
 class WasteCat(models.Model):
-    name = models.CharField(max_length=100)
-    description = models.CharField(max_length=1000)
+    name = models.CharField(max_length=20)
+    description = models.CharField(max_length=100)
     
     def __str__(self):
         return self.name
     
 class WasteItem(models.Model):
     name = models.CharField(max_length=100)
+    description = models.CharField(max_length=120)
+    location = models.ManyToManyField(Location)
     waste_category = models.ForeignKey(WasteCat,on_delete=models.CASCADE)
     
     def __str__(self):
         return self.name
     
-class WasteLog(models.Model):
-    log_id = models.CharField(max_length=10, unique=True)
-    name = models.CharField(max_length=100)
+class Audit(models.Model):
+    audit_id = models.CharField(max_length=10)
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    waste_item = models.ManyToManyField(WasteItem)
     waste_quantity = models.FloatField()
     datetime = models.DateTimeField()
-    created_by = models.ForeignKey(User, on_delete=models.CASCADE)
-    location = models.ManyToManyField(Location)
-    organization = models.ManyToManyField(Organization)
-    waste_item = models.ManyToManyField(WasteItem)
     
     def __str__(self):
-        return self.name
+        return self.audit_id
     
 
     

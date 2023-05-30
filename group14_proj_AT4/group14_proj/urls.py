@@ -32,7 +32,7 @@ urlpatterns = [
     path('wastelog/list/<int:id>/', views.log_form, name='logupdate'),
     path('wastelog/delete/<int:id>/', views.log_delete, name='logdelete'),
     path('wastelog/list/', views.log_list, name='loglist'),
-    path('admin-home/',include('admin_g14.urls')),
+    path('admin-g14',include('admin_g14.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
