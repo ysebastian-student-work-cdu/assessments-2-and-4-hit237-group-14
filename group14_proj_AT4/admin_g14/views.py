@@ -3,6 +3,7 @@ from django.apps import apps
 from .models import *
 from .forms import *
 from django.http import HttpResponseRedirect, HttpResponse
+from django.db import connection
 
 
 
