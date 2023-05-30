@@ -1,7 +1,6 @@
 from .models import *
 from django import forms
 from django.forms import ModelForm
-from django.forms import DateTimeInput
 
 
 class FormOrganization(ModelForm):
@@ -9,29 +8,24 @@ class FormOrganization(ModelForm):
     class Meta:
         model = Organization
         fields = '__all__'
-        labels = {
-            'name': 'Organization Name',
-            'name': 'Organization Address',
-        }
+
+class FormRole(ModelForm):
+    required_css_class = 'required'
+    class Meta:
+        model = Role
+        fields = '__all__'
 
 class FormUser(ModelForm):
     required_css_class = 'required'
     class Meta:
         model = User
         fields = '__all__'
-        labels = {
-            'name': 'User Name',
-        }
 
 class FormLocation(ModelForm):
     required_css_class = 'required'
     class Meta:
         model = Location
         fields = '__all__'
-        labels = {
-            'name': 'Location Name',
-            'address': 'Location Address',
-        }
 
 class FormWasteCat(ModelForm):
     required_css_class = 'required'
@@ -45,21 +39,11 @@ class FormWasteItem(ModelForm):
         model = WasteItem
         fields = '__all__'
 
-class FormWasteLog(ModelForm):
-        required_css_class = 'required'
-        class Meta:
-            model = WasteLog
-            fields = ['log_id','name','location','organization','waste_item','waste_quantity','datetime','created_by']
-            widgets = {
-            'datetime': DateTimeInput(attrs={'type': 'date'}),
-            'waste_item': forms.Select(attrs={'style': 'width: 500px;'}),
-            'organization': forms.Select(attrs={'style': 'width: 500px;'}),
-            'location': forms.Select(attrs={'style': 'width: 500px;'})
-            }
-            labels = {
-            'name': 'Description',
-            'waste_quantity' : 'Quantity Wasted (in Kg)',
-            'datetime' : ' Date',
-            'created_by' : 'Who am I'
+class FormAudit(ModelForm):
+    required_css_class = 'required'
+    class Meta:
+        model = Audit
+        fields = '__all__'
+        widgets = {
+            'datetime': forms.DateTimeInput(attrs={'class': 'datetimepicker'}),
         }
-

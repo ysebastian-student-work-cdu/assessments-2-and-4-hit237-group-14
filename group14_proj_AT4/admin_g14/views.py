@@ -3,13 +3,12 @@ from django.apps import apps
 from .models import *
 from .forms import *
 from django.http import HttpResponseRedirect, HttpResponse
-from django.db import connection
-
-
+from django.db import models
+from django.urls import reverse
 
 
 #dictionry to map model classes to their corresponding Forms 
-MODELE_FORMS = {Organization:FormOrganization, User:FormUser, Location:FormLocation, WasteCat:FormWasteCat, WasteItem:FormWasteItem, WasteLog:FormWasteLog}
+MODELE_FORMS = {Organization:FormOrganization, Role:FormRole, User:FormUser, Location:FormLocation, WasteCat:FormWasteCat, WasteItem:FormWasteItem, Audit:FormAudit}
 
 def get_model_record_to_form(request,model='',pk=''):
     model_class = apps.get_model('admin_g14',model)
@@ -45,7 +44,7 @@ def view(request,model=''):
     model_class = apps.get_model('admin_g14',model)
     rows = model_class.objects.filter()
     if not rows.exists():
-        return HttpResponse("no records found.<br><a href ='/admin-home'>Go to Admin home Page<br>")
+        return HttpResponse("no records found.<br><a href ='/foodwaste_admin'>Go to Admin home Page<br>")
     else:
         return render(request,'admin_g14/cred.html',{'rows':rows,'model':model,'view':True,'delete':False})
     
@@ -66,7 +65,7 @@ def save(request, model='',pk=''):
         form=MODELE_FORMS[model_class](request.POST,instance=a)
         if form.is_valid():
             form.save()
-        return HttpResponseRedirect('/admin-home')
+        return HttpResponseRedirect('/foodwaste_admin')
  
 def delete(request,model=''):
     error=''
@@ -83,13 +82,7 @@ def delete(request,model=''):
             return render(request,'admin_g14/cred.html',{'rows':rows,'model':model,'view':False,'delete':True,'error':error})
     else:
         if not rows.exists():
-            return HttpResponse("no records found.<br><a href ='/admin-home'>Go to Admin home Page<br>")
+            return HttpResponse("no records found.<br><a href ='/foodwaste_admin'>Go to Admin home Page<br>")
         else:
             return render(request,'admin_g14/cred.html',{'rows':rows,'model':model,'view':False,'delete':True,'error':error})
-
-def running_total():
-    with connection.cursor() as cursor:
-        output = cursor.execute("SELECT SUM(waste_quantity) FROM admin_g14_wastelog")
-        total = cursor.fetchone()
-    return total[0]
-
+    
