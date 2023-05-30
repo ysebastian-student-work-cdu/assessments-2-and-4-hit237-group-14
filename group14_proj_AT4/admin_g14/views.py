@@ -87,11 +87,9 @@ def delete(request,model=''):
         else:
             return render(request,'admin_g14/cred.html',{'rows':rows,'model':model,'view':False,'delete':True,'error':error})
 
-def register(request):
+def running_total():
     with connection.cursor() as cursor:
-        output = cursor.execute("SELECT * FROM admin_g14_wastelog")
-        raw = cursor.fetchall()
-    forms = raw
-    
-    return render(request, 'admin_g14/register.html',{"forms":forms})
-    
+        output = cursor.execute("SELECT SUM(waste_quantity) FROM admin_g14_wastelog")
+        total = cursor.fetchone()
+    return total[0]
+

@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from .forms import ContactForm, LogForm
 from admin_g14.models import WasteLog
 from admin_g14.forms import FormWasteLog
+from admin_g14.views import running_total
 
 
 # Create your views here.
@@ -76,7 +77,7 @@ def log_form(request, id=0):
         else:
             log = WasteLog.objects.get(pk=id)
             form = FormWasteLog(instance=log)
-        return render(request, 'group14_app/log_form.html', {'form': form})
+        return render(request, 'group14_app/log_form.html', {'form': form,'running_total':running_total()})
     if request.method =='POST':
         form = FormWasteLog(request.POST)
         if form.is_valid():
