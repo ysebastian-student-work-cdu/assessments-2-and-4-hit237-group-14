@@ -7,7 +7,7 @@ Home
 {% block heading %}
 <header>
     <section id="hero">
-        <h1>Group 14 - Food Waste Problems and Mitigation</h1>
+        <h1>Group 14 - Food Waste Problems and Audit Tool</h1>
     </section>
 </header>
 {% endblock heading %}
@@ -39,6 +39,7 @@ Home
 
     <h3>Our Website Introduction:</h3>
     {% for group_intro in group_intros %}
+    <br>
     <p>{{ group_intro.brief}}</p>
     {% endfor %}
 
